@@ -1,9 +1,96 @@
-.nav {
-    text-align: right;
-    .nav__link {
-        font-size: 15px;
-        padding: 10px;
-        color: aqua;
-        margin: 25px;
+
+$primary_color: #9356DC;
+
+$secondary_color: #FF79DA;
+
+$tertiary_color: #99E2D0;
+
+$main_background_color: #F6F6F6;
+
+$location_background_color: #EAEAEA;
+
+$location_color: #353535;
+
+$white_color: #FFFFFF;
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+body {
+    align-items: center;
+    flex-direction: column;
+
+    font-family: Roboto;
+
+    margin: 0px;
+    margin-top: 10px;
+
+    background-color: $main_background_color;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    padding: 15px;
+
+    background-color: $white_color;
+}
+
+nav {
+    text-align: center;
+    .nav__location {
+        display: flex;
+        justify-content: center;
+
+        margin: 0px;
+        padding: 15px;
+        gap: 17px;
+
+        background-color: $location_background_color;
+        color: $location_color;
+
+        font-weight: bold;
+    }
+    .nav__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            border: hidden;
+            border-radius: 25px;
+
+            color: $white_color;
+            background: linear-gradient($secondary_color, $primary_color);
+
+            text-decoration: none;
+            h4 {
+                margin: 15px 15px 15px 15px;
+
+                font-weight: 500;
+            }
+        }
+    }
+    h2 {
+        font-weight: 300;
+    }
+}
+
+footer {
+    h2 {
+        font-family: Shrikhand;
     }
 }
