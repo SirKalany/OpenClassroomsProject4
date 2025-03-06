@@ -119,6 +119,10 @@ nav {
 
     padding-top: 30px;
 
+    padding-bottom: 30px;
+
+    gap: 15px;
+
     h1 {
         margin: 20px;
     }
@@ -126,15 +130,116 @@ nav {
     .fonctionnement__article {
 
         display: flex;
-        align-items: baseline;
 
-        gap: 20px;
+        align-items: center;
 
-        border: solid;
-        border-radius: 20px;
+        position: relative;
 
-        color: $location_color; //TEMPORARY
 
+        .fonctionnement__number {
+
+            border: hidden;
+            border-radius: 50%;
+            text-align: center;
+
+            color: $white_color;
+            background-color: #9356DC;
+
+            width: 24px;
+            height: 24px;
+
+            position: absolute;
+            left: 18px;
+
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .fonctionnement__content {
+
+            display: flex;
+            align-items: baseline;
+
+            flex-grow: 1;
+
+            gap: 20px;
+            border-radius: 20px;
+
+            border: hidden;
+
+            background-color: #F6F6F6;
+            color: $location_color; //TEMPORARY
+
+            margin-right: 20px;
+            margin-left: 30px;
+            padding-left: 30px;
+        }
+
+    }
+}
+
+.restaurants {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    img {
+
+        object-fit: cover;
+
+        width: 100%;
+        height: 170px;
+
+        border-radius: 15px 15px 0 0;
+
+    }
+
+    .restaurants__article {
+
+        margin: 20px;
+
+        border-radius: 0 0 15px 15px;
+
+        background-color: #FFFFFF;
+
+        .restaurants__content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-left: 10px;
+            margin-right: 40px;
+
+            .restaurants__text {
+
+                h2 {
+                    margin-top: 15px;
+                    margin-bottom: 0;
+                }
+
+                h4 {
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+
+                    font-weight: 300;
+                }
+
+            }
+
+            .restaurants__favorite {
+
+                display: flex;
+                align-self: center;
+
+                i {
+
+                }
+
+            }
+
+        }
     }
 }
 
