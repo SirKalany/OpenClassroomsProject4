@@ -182,7 +182,7 @@ nav {
 
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 
     img {
 
@@ -197,7 +197,7 @@ nav {
 
     .restaurants__article {
 
-        margin: 20px;
+        margin: 0 20px 0 20px;
 
         border-radius: 0 0 15px 15px;
 
@@ -236,15 +236,46 @@ nav {
                 i {
 
                 }
-
             }
-
         }
     }
 }
 
 footer {
+
+    background-color: $location_color;
+    color: #FFFFFF;
+
     h2 {
         font-family: Shrikhand;
+        font-weight: 500;
+    }
+
+    h3 {
+
+        margin: 0;
+        padding-bottom: 7px;
+        font-weight: 400;
+
+    }
+
+    .footer__click {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin: 7;
+
+        gap: 15px;
+
+        i {
+            height: 13px;
+            width: 12px;
+        }
+
+        h3 {
+            font-weight: 500;
+        }
     }
 }
