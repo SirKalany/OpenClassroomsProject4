@@ -1,5 +1,6 @@
 h1 {
   font-size: 24px;
+  margin: 20px;
 }
 
 h2 {
@@ -29,7 +30,7 @@ header {
   padding: 0px;
   background-color: #FFFFFF;
 }
-header .header__image {
+header img {
   align-self: center;
   margin: 20px 0px 15px 0px;
 }
@@ -81,9 +82,6 @@ nav h2 {
   padding-bottom: 30px;
   gap: 15px;
 }
-.fonctionnement h1 {
-  margin: 20px;
-}
 .fonctionnement .fonctionnement__article {
   display: flex;
   align-items: center;
@@ -100,7 +98,7 @@ nav h2 {
   position: absolute;
   left: 18px;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 28px;
 }
 .fonctionnement .fonctionnement__article .fonctionnement__content {
   display: flex;
@@ -120,6 +118,7 @@ nav h2 {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-bottom: 75px;
 }
 .restaurants img {
   -o-object-fit: cover;
@@ -155,10 +154,12 @@ nav h2 {
 footer {
   background-color: #353535;
   color: #FFFFFF;
+  padding: 20px;
 }
 footer h2 {
   font-family: Shrikhand;
   font-weight: 500;
+  margin-top: 0;
 }
 footer h3 {
   margin: 0;
@@ -168,8 +169,8 @@ footer h3 {
 footer .footer__click {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin: 7;
+  align-items: baseline;
+  justify-items: center;
   gap: 15px;
 }
 footer .footer__click i {
