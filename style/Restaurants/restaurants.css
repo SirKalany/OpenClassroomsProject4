@@ -51,8 +51,9 @@ header .header__imageresto img {
 }
 
 .menu {
-  margin: 13px 13px 0 13px;
-  border-radius: 50px;
+  margin: 0px 13px 0 13px;
+  padding-top: 30px;
+  border-radius: 50px 50px 0px 0;
 }
 .menu .menu__titre {
   display: flex;
@@ -143,4 +144,55 @@ footer .footer__click i {
 }
 footer .footer__click h3 {
   font-weight: 500;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: #FFFFFF;
+  }
+  header img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  header i {
+    position: absolute;
+    left: 25px;
+    top: 45px;
+  }
+  header .header__imageresto img {
+    height: 383px;
+  }
+  .menu {
+    margin-left: 192px;
+    margin-right: 192px;
+    background-color: #F6F6F6;
+  }
+  .menu .menu__titre {
+    justify-content: center;
+  }
+  .menu .menu__plats {
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+  .menu .menu__button {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    padding-top: 50px;
+  }
+  footer h2 {
+    margin: 0;
+  }
+  footer .footer__content {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  footer .footer__content .footer__click h3 {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=restaurants.css.map */
