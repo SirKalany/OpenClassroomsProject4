@@ -66,8 +66,6 @@ header {
         background-color: $location_background_color;
         color: $location_color;
 
-        filter: drop-shadow(0px 4px 4px);
-
         font-weight: bold;
     }
 }
@@ -122,55 +120,62 @@ nav {
 
     padding-bottom: 30px;
 
-    gap: 15px;
-
-    .fonctionnement__article {
+    .fonctionnement__list {
 
         display: flex;
 
-        align-items: center;
+        flex-direction: column;
 
-        position: relative;
+        gap: 15px;
 
-        .fonctionnement__number {
-
-            border: hidden;
-            border-radius: 50%;
-            text-align: center;
-
-            color: $white_color;
-            background-color: #9356DC;
-
-            width: 24px;
-            height: 24px;
-
-            position: absolute;
-            left: 18px;
-
-            font-size: 14px;
-            line-height: 28px;
-        }
-
-        .fonctionnement__content {
+        .fonctionnement__article {
 
             display: flex;
-            align-items: baseline;
 
-            flex-grow: 1;
+            align-items: center;
 
-            gap: 20px;
-            border-radius: 20px;
+            position: relative;
 
-            border: hidden;
+            .fonctionnement__number {
 
-            background-color: #F6F6F6;
-            color: $location_color; //TEMPORARY
+                border: hidden;
+                border-radius: 50%;
+                text-align: center;
 
-            margin-right: 20px;
-            margin-left: 30px;
-            padding-left: 30px;
+                color: $white_color;
+                background-color: #9356DC;
+
+                width: 24px;
+                height: 24px;
+
+                position: absolute;
+                left: 18px;
+
+                font-size: 14px;
+                line-height: 28px;
+            }
+
+            .fonctionnement__content {
+
+                display: flex;
+                align-items: baseline;
+
+                flex-grow: 1;
+
+                gap: 20px;
+                border-radius: 20px;
+
+                border: hidden;
+
+                background-color: #F6F6F6;
+                color: $location_color; //TEMPORARY
+
+                margin-right: 20px;
+                margin-left: 30px;
+                padding-left: 30px;
+            }
+
         }
-
     }
 }
 
@@ -232,9 +237,7 @@ nav {
                 display: flex;
                 align-self: center;
 
-                i {
-
-                }
+                i {}
             }
         }
     }
@@ -279,4 +282,143 @@ footer {
             font-weight: 500;
         }
     }
+}
+
+@media screen and (min-width:1024px) {
+
+    header {
+
+        img {
+
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+        }
+
+    }
+    
+    nav {
+
+        h1 {
+
+            font-size: 40px;
+
+        }
+
+    }
+    
+    .fonctionnement {
+
+        justify-content: center;
+
+        padding-left: 180px;
+        padding-right: 180px;
+
+        h1 {
+
+            margin-left: 0;
+
+        }
+
+        .fonctionnement__list {
+
+            flex-direction: row;
+
+            .fonctionnement__article {
+
+                width: 33%;
+
+                .fonctionnement__content {
+
+                    padding-right: 50px;
+                    width: fit-content;
+
+                }
+
+            }
+        }
+    }
+
+    .restaurants {
+
+        h1 {
+
+            margin-left: 180px;
+            margin-right: 180px;
+
+        }
+
+        .restaurants__list {
+
+            display: flex;
+
+            flex-direction: row;
+
+            flex-wrap: wrap;
+
+            gap: 50px;
+
+            margin-left: 180px;
+            margin-right: 180px;
+
+            .restaurants__list__half {
+
+                display: flex;
+
+                width: 100%;
+
+                gap: 100px;
+
+                .restaurants__article {
+
+                    width: 100%;
+
+                    margin: 0;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    footer {
+
+        display: flex;
+
+        flex-direction: row-reverse;
+
+        gap: 50px;
+
+        padding-top: 50px;
+
+        h2 {
+
+            margin: 0;
+
+        }
+
+        .footer__content {
+
+            display: flex;
+
+            flex-direction: row;
+
+            gap: 15px;
+
+            .footer__click {
+
+                h3 {
+
+                    font-size: 16px;
+
+                }
+
+            }
+
+        }
+
+    }
+
 }

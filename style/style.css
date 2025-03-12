@@ -42,7 +42,6 @@ header .header__location {
   gap: 17px;
   background-color: #EAEAEA;
   color: #353535;
-  filter: drop-shadow(0px 4px 4px);
   font-weight: bold;
 }
 
@@ -80,14 +79,18 @@ nav h2 {
   background-color: #FFFFFF;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.fonctionnement .fonctionnement__list {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }
-.fonctionnement .fonctionnement__article {
+.fonctionnement .fonctionnement__list .fonctionnement__article {
   display: flex;
   align-items: center;
   position: relative;
 }
-.fonctionnement .fonctionnement__article .fonctionnement__number {
+.fonctionnement .fonctionnement__list .fonctionnement__article .fonctionnement__number {
   border: hidden;
   border-radius: 50%;
   text-align: center;
@@ -100,7 +103,7 @@ nav h2 {
   font-size: 14px;
   line-height: 28px;
 }
-.fonctionnement .fonctionnement__article .fonctionnement__content {
+.fonctionnement .fonctionnement__list .fonctionnement__article .fonctionnement__content {
   display: flex;
   align-items: baseline;
   flex-grow: 1;
@@ -179,4 +182,71 @@ footer .footer__click i {
 }
 footer .footer__click h3 {
   font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  header img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  nav h1 {
+    font-size: 40px;
+  }
+  .fonctionnement {
+    justify-content: center;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .fonctionnement h1 {
+    margin-left: 0;
+  }
+  .fonctionnement .fonctionnement__list {
+    flex-direction: row;
+  }
+  .fonctionnement .fonctionnement__list .fonctionnement__article {
+    width: 33%;
+  }
+  .fonctionnement .fonctionnement__list .fonctionnement__article .fonctionnement__content {
+    padding-right: 50px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .restaurants h1 {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .restaurants .restaurants__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .restaurants .restaurants__list .restaurants__list__half {
+    display: flex;
+    width: 100%;
+    gap: 100px;
+  }
+  .restaurants .restaurants__list .restaurants__list__half .restaurants__article {
+    width: 100%;
+    margin: 0;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    padding-top: 50px;
+  }
+  footer h2 {
+    margin: 0;
+  }
+  footer .footer__content {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  footer .footer__content .footer__click h3 {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
