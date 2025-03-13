@@ -53,6 +53,13 @@ header {
 
         align-self: center;
 
+        a {
+
+            color: black;
+
+        }
+
+
     }
 
     img {
@@ -139,17 +146,17 @@ header {
                     position: relative;
                     background: black;
                     background-clip: text;
-                    -webkit-text-fill-color: transparent;
+
                 }
 
-                &:active {
+                &:hover {
 
                     &::before {
 
                         position: relative;
                         background: linear-gradient($secondary_color, $primary_color);
                         background-clip: text;
-                        -webkit-text-fill-color: transparent;
+                        color: transparent;
 
                     }
 
@@ -214,13 +221,13 @@ header {
 
                 width: 75px;
 
-                height: 88px;
+                height: 76px;
 
                 border-radius: 0px 15px 15px 0px;
 
                 background-color: $tertiary_color;
 
-                transition-property: transform;
+                transition-property: transform 200ms;
                 transition-duration: 400ms;
                 transform: scale(0);
 
@@ -243,8 +250,6 @@ header {
             h2 {
 
                 margin: 12px;
-
-                padding-top: 12px;
 
                 justify-self: left;
 

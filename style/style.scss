@@ -91,10 +91,22 @@ nav {
 
             text-decoration: none;
 
+            box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+
+            opacity: 1;
+
+            transition: opacity 500ms;
+
             h4 {
                 margin: 15px 20px 15px 20px;
 
                 font-weight: 500;
+            }
+
+            &:hover {
+
+                opacity: 0.8;
+
             }
         }
     }
@@ -368,6 +380,13 @@ footer {
                 width: 100%;
 
                 gap: 100px;
+
+                a {
+
+                    color: black;
+                    text-decoration: none;
+
+                }
 
                 .restaurants__article {
 
