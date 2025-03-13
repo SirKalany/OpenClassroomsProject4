@@ -74,7 +74,15 @@ header {
 
         img {
 
+            display: block;
+
+            position: absolute;
+
             object-fit: cover;
+
+            z-index: -1;
+
+            top: 50px;
 
             width: 100%;
             height: 275px;
@@ -86,7 +94,7 @@ header {
 
 .menu {
 
-    margin: 0px 13px 0 13px;
+    margin: 290px 13px 0 13px;
 
     padding-top: 30px;
 
@@ -101,7 +109,7 @@ header {
         h5 {
 
             font-weight: 400;
-            
+
             font-size: 28px;
 
             font-family: Shrikhand;
@@ -110,11 +118,44 @@ header {
 
         }
 
-        i {
+        .menu__favorite {
 
             position: relative;
 
             left: 40px;
+
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            background-color: $main_background_color;
+
+            cursor: pointer;
+
+            i {
+
+                &::before {
+
+                    position: relative;
+                    background: black;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                &:active {
+
+                    &::before {
+
+                        position: relative;
+                        background: linear-gradient($secondary_color, $primary_color);
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+
+                    }
+
+                }
+
+            }
 
         }
 
@@ -134,11 +175,24 @@ header {
 
             border-color: $tertiary_color;
 
-            width: 40px;;
+            width: 40px;
+            ;
 
         }
 
         .menu__plats__indiv {
+
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-between;
+
+            width: 100%;
+
+            padding: 0;
+
+            border: hidden;
 
             border-radius: 15px;
 
@@ -146,12 +200,59 @@ header {
 
             box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 
+            margin-bottom: 12px;
+
+            cursor: pointer;
+
+            .menu_check {
+
+                display: none;
+
+                justify-content: center;
+
+                align-items: center;
+
+                width: 75px;
+
+                height: 88px;
+
+                border-radius: 0px 15px 15px 0px;
+
+                background-color: $tertiary_color;
+
+                transition-property: transform;
+                transition-duration: 400ms;
+                transform: scale(0);
+
+                i {
+
+                    align-self: center;
+
+                    color: $tertiary_color;
+
+                    background-color: white;
+
+                    border-radius: 25px;
+
+                    padding: 5px;
+
+                }
+
+            }
+
             h2 {
 
                 margin: 12px;
 
                 padding-top: 12px;
 
+                justify-self: left;
+
+            }
+
+            .menu_left {
+
+                flex-grow: 1;
             }
 
             .menu__plats__indiv__prix {
@@ -159,6 +260,7 @@ header {
                 display: flex;
 
                 justify-content: space-between;
+
 
                 h4 {
 
@@ -174,6 +276,18 @@ header {
 
                     font-weight: bold;
                 }
+
+            }
+
+        }
+
+        .menu__plats__indiv:hover {
+
+            .menu_check {
+
+                display: flex;
+
+                transform: scale(1.0);
 
             }
 
@@ -199,10 +313,23 @@ header {
 
             text-decoration: none;
 
+            box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+
+            opacity: 1;
+
+            transition: opacity 500ms;
+
             h4 {
                 margin: 15px 40px 15px 40px;
 
                 font-weight: 500;
+
+            }
+
+            &:hover {
+
+                opacity: 0.8;
+
             }
         }
     }
@@ -253,10 +380,10 @@ footer {
 
     body {
 
-    
+
         background-color: $white_color;
     }
-    
+
     header {
 
         img {
@@ -271,7 +398,7 @@ footer {
             position: absolute;
             left: 25px;
             top: 45px;
-    
+
         }
 
         .header__imageresto {
@@ -279,7 +406,7 @@ footer {
             img {
 
                 height: 383px;
-    
+
             }
         }
 
