@@ -51,20 +51,22 @@ header .header__imageresto img {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
-  top: 50px;
+  top: 75px;
   width: 100%;
   height: 275px;
   margin: 0;
 }
 
 .menu {
-  margin: 290px 13px 0 13px;
+  margin: 240px 0px 0 0px;
   padding-top: 30px;
-  border-radius: 50px 50px 0px 0;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #F6F6F6;
 }
 .menu .menu__titre {
   display: flex;
   align-items: center;
+  margin-left: 13px;
 }
 .menu .menu__titre h5 {
   font-weight: 400;
@@ -81,18 +83,27 @@ header .header__imageresto img {
   background-color: #F6F6F6;
   cursor: pointer;
 }
-.menu .menu__titre .menu__favorite i::before {
+.menu .menu__titre .menu__favorite .fa-regular::before {
   position: relative;
   background: black;
   -webkit-background-clip: text;
           background-clip: text;
+  z-index: 1;
 }
-.menu .menu__titre .menu__favorite i:hover::before {
+.menu .menu__titre .menu__favorite .fa-regular:hover::before {
   position: relative;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  z-index: 1;
+}
+.menu .menu__titre .menu__favorite .favorite__animation {
+  height: 0px;
+}
+.menu .menu__plats {
+  margin-left: 13px;
+  margin-right: 13px;
 }
 .menu .menu__plats p {
   font-size: 16px;
@@ -116,14 +127,13 @@ header .header__imageresto img {
   cursor: pointer;
 }
 .menu .menu__plats .menu__plats__indiv .menu_check {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 75px;
+  width: 0px;
   height: 76px;
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
-  transition-property: transform 200ms;
   transition-duration: 400ms;
   transform: scale(0);
 }
@@ -155,6 +165,7 @@ header .header__imageresto img {
 }
 .menu .menu__plats .menu__plats__indiv:hover .menu_check {
   display: flex;
+  width: 75px;
   transform: scale(1);
 }
 .menu .menu__button {
@@ -226,10 +237,13 @@ footer .footer__click h3 {
   }
   header .header__imageresto img {
     height: 383px;
+    top: 75px;
   }
   .menu {
     margin-left: 192px;
     margin-right: 192px;
+    margin-top: 290px;
+    padding-top: 30px;
     background-color: #F6F6F6;
   }
   .menu .menu__titre {
@@ -238,6 +252,9 @@ footer .footer__click h3 {
   .menu .menu__plats {
     margin-left: 210px;
     margin-right: 210px;
+  }
+  .menu .menu__plats p {
+    margin-left: 0;
   }
   .menu .menu__button {
     margin-bottom: 0;

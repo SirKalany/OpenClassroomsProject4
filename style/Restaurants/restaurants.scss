@@ -89,23 +89,26 @@ header {
 
             z-index: -1;
 
-            top: 50px;
+            top: 75px;
 
             width: 100%;
             height: 275px;
 
             margin: 0;
+
         }
     }
 }
 
 .menu {
 
-    margin: 290px 13px 0 13px;
+    margin: 240px 0px 0 0px;
 
     padding-top: 30px;
 
-    border-radius: 50px 50px 0px 0;
+    border-radius: 50px 50px 0px 0px;
+
+    background-color: #F6F6F6;
 
     .menu__titre {
 
@@ -113,8 +116,10 @@ header {
 
         align-items: center;
 
-        h5 {
+        margin-left: 13px;
 
+        h5 {
+            
             font-weight: 400;
 
             font-size: 28px;
@@ -139,13 +144,14 @@ header {
 
             cursor: pointer;
 
-            i {
+            .fa-regular {
 
                 &::before {
 
                     position: relative;
                     background: black;
                     background-clip: text;
+                    z-index: 1;
 
                 }
 
@@ -157,10 +163,17 @@ header {
                         background: linear-gradient($secondary_color, $primary_color);
                         background-clip: text;
                         color: transparent;
+                        z-index: 1;
 
                     }
 
                 }
+
+            }
+
+            .favorite__animation {
+
+                height: 0px;
 
             }
 
@@ -169,6 +182,9 @@ header {
     }
 
     .menu__plats {
+
+        margin-left: 13px;
+        margin-right: 13px;
 
         p {
 
@@ -213,13 +229,13 @@ header {
 
             .menu_check {
 
-                display: none;
+                display: flex;
 
                 justify-content: center;
 
                 align-items: center;
 
-                width: 75px;
+                width: 0px;
 
                 height: 76px;
 
@@ -227,7 +243,7 @@ header {
 
                 background-color: $tertiary_color;
 
-                transition-property: transform 200ms;
+
                 transition-duration: 400ms;
                 transform: scale(0);
 
@@ -291,6 +307,8 @@ header {
             .menu_check {
 
                 display: flex;
+
+                width: 75px;
 
                 transform: scale(1.0);
 
@@ -412,6 +430,8 @@ footer {
 
                 height: 383px;
 
+                top: 75px;
+
             }
         }
 
@@ -421,6 +441,10 @@ footer {
 
         margin-left: 192px;
         margin-right: 192px;
+
+        margin-top: 290px;
+
+        padding-top: 30px;
 
         background-color: #F6F6F6;
 
@@ -434,6 +458,12 @@ footer {
 
             margin-left: 210px;
             margin-right: 210px;
+
+            p {
+
+                margin-left: 0;
+
+            }
 
         }
 
