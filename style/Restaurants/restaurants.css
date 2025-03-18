@@ -67,6 +67,7 @@ header .header__imageresto img {
   display: flex;
   align-items: center;
   margin-left: 13px;
+  gap: 40px;
 }
 .menu .menu__titre h5 {
   font-weight: 400;
@@ -75,9 +76,8 @@ header .header__imageresto img {
   margin: 0;
 }
 .menu .menu__titre .menu__favorite {
-  position: relative;
-  left: 40px;
-  margin: 0;
+  display: flex;
+  align-self: center;
   padding: 0;
   border: 0;
   background-color: #F6F6F6;
@@ -88,18 +88,39 @@ header .header__imageresto img {
   background: black;
   -webkit-background-clip: text;
           background-clip: text;
+  z-index: 0;
+}
+.menu .menu__titre .menu__favorite .fa-solid {
+  position: absolute;
+  height: 21px;
+  width: 21px;
+  transition: 400ms ease;
+  transform: scale(0);
+}
+.menu .menu__titre .menu__favorite .fa-solid::before {
+  position: absolute;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  left: 0px;
   z-index: 1;
 }
-.menu .menu__titre .menu__favorite .fa-regular:hover::before {
+.menu .menu__titre .menu__favorite:hover .fa-regular::before {
+  position: relative;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.menu .menu__titre .menu__favorite:hover .fa-solid {
+  position: absolute;
+  transform: scale(1.1);
+}
+.menu .menu__titre .menu__favorite:hover .fa-solid::before {
   position: relative;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
   z-index: 1;
-}
-.menu .menu__titre .menu__favorite .favorite__animation {
-  height: 0px;
 }
 .menu .menu__plats {
   margin-left: 13px;

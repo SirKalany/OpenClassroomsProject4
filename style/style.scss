@@ -196,9 +196,132 @@ nav {
     display: flex;
     flex-direction: column;
 
-    gap: 18px;
-
     margin-bottom: 75px;
+
+    .restaurants__list {
+
+        text-decoration: none;
+
+        .restaurants__list__half {
+
+            .restaurants__article {
+
+                margin: 20px 20px 0 20px;
+
+                border-radius: 18px;
+
+                background-color: #FFFFFF;
+
+                a {
+
+                    text-decoration: none;
+                    color: black;
+
+                }
+
+                .restaurants__content {
+
+                    display: flex;
+
+                    justify-content: space-between;
+
+                    margin-left: 10px;
+                    margin-right: 40px;
+
+
+
+                    .restaurants__text {
+
+                        h2 {
+                            margin-top: 15px;
+                            margin-bottom: 0;
+                        }
+
+                        h4 {
+                            margin-top: 10px;
+                            margin-bottom: 15px;
+
+                            font-weight: 300;
+                        }
+
+                    }
+
+                    .restaurants__favorite {
+
+                        display: flex;
+                        align-self: center;
+
+                        .fa-regular {
+
+                            &::before {
+
+                                position: relative;
+                                background: black;
+                                background-clip: text;
+                                z-index: 0;
+
+                            }
+
+                        }
+
+                        .fa-solid {
+
+                            position: absolute;
+                            height: 21px;
+                            width: 21px;
+
+                            transition: 400ms ease;
+                            transform: scale(0);
+
+                            &::before {
+
+                                position: absolute;
+                                background: linear-gradient($secondary_color, $primary_color);
+                                background-clip: text;
+                                color: $secondary_color;
+                                z-index: 1;
+
+                            }
+
+                        }
+
+                    }
+
+                    .restaurants__favorite:hover {
+
+                        .fa-regular {
+
+                            &::before {
+
+                                position: relative;
+                                background-clip: text;
+
+                            }
+
+                        }
+
+                        .fa-solid {
+
+                            position: absolute;
+
+                            transform: scale(1.1);
+
+                            &::before {
+
+                                position: relative;
+                                background: linear-gradient($secondary_color, $primary_color);
+                                background-clip: text;
+                                color: transparent;
+                                z-index: 1;
+                                left: -0.1px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     img {
 
@@ -211,48 +334,13 @@ nav {
 
     }
 
-    .restaurants__article {
+    h1 {
 
-        margin: 0 20px 0 20px;
+        margin-bottom: 0;
+        margin-top: 50px;
 
-        border-radius: 0 0 15px 15px;
-
-        background-color: #FFFFFF;
-
-        .restaurants__content {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            margin-left: 10px;
-            margin-right: 40px;
-
-            .restaurants__text {
-
-                h2 {
-                    margin-top: 15px;
-                    margin-bottom: 0;
-                }
-
-                h4 {
-                    margin-top: 10px;
-                    margin-bottom: 15px;
-
-                    font-weight: 300;
-                }
-
-            }
-
-            .restaurants__favorite {
-
-                display: flex;
-                align-self: center;
-
-                i {}
-            }
-        }
     }
+
 }
 
 footer {
@@ -308,7 +396,7 @@ footer {
         }
 
     }
-    
+
     nav {
 
         h1 {
@@ -318,7 +406,7 @@ footer {
         }
 
     }
-    
+
     .fonctionnement {
 
         justify-content: center;
