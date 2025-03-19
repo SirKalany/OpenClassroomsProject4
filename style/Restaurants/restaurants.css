@@ -1,3 +1,11 @@
+@keyframes Heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 h1 {
   font-size: 24px;
   margin: 20px;
@@ -94,16 +102,14 @@ header .header__imageresto img {
   position: absolute;
   height: 21px;
   width: 21px;
-  transition: 400ms ease;
-  transform: scale(0);
 }
 .menu .menu__titre .menu__favorite .fa-solid::before {
   position: absolute;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
-  left: 0px;
-  z-index: 1;
+  left: -0.5px;
+  z-index: -1;
 }
 .menu .menu__titre .menu__favorite:hover .fa-regular::before {
   position: relative;
@@ -112,7 +118,9 @@ header .header__imageresto img {
 }
 .menu .menu__titre .menu__favorite:hover .fa-solid {
   position: absolute;
-  transform: scale(1.1);
+  animation-name: Heart;
+  animation-duration: 0s;
+  animation-fill-mode: forwards;
 }
 .menu .menu__titre .menu__favorite:hover .fa-solid::before {
   position: relative;
@@ -121,6 +129,7 @@ header .header__imageresto img {
           background-clip: text;
   color: transparent;
   z-index: 1;
+  top: 0.5px;
 }
 .menu .menu__plats {
   margin-left: 13px;
@@ -152,7 +161,6 @@ header .header__imageresto img {
   justify-content: center;
   align-items: center;
   width: 0px;
-  height: 76px;
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
   transition-duration: 400ms;
@@ -165,16 +173,17 @@ header .header__imageresto img {
   border-radius: 25px;
   padding: 5px;
 }
-.menu .menu__plats .menu__plats__indiv h2 {
+.menu .menu__plats .menu__plats__indiv .menu_left {
+  width: 100%;
+}
+.menu .menu__plats .menu__plats__indiv .menu_left h2 {
   margin: 12px;
   justify-self: left;
-}
-.menu .menu__plats .menu__plats__indiv .menu_left {
-  flex-grow: 1;
 }
 .menu .menu__plats .menu__plats__indiv .menu__plats__indiv__prix {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .menu .menu__plats .menu__plats__indiv .menu__plats__indiv__prix h4 {
   margin: 0 12px 12px 12px;
