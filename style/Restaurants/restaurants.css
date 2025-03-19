@@ -1,3 +1,11 @@
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes Heart {
   0% {
     transform: scale(0);
@@ -28,6 +36,8 @@ body {
   font-family: Roboto;
   margin: 0px;
   background-color: #F6F6F6;
+  animation-name: FadeIn;
+  animation-duration: 1s;
 }
 
 header {

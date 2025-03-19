@@ -12,6 +12,16 @@ $location_color: #353535;
 
 $white_color: #FFFFFF;
 
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes Heart {
     0% {
         transform: scale(0);
@@ -47,6 +57,9 @@ body {
     margin: 0px;
 
     background-color: $main_background_color;
+
+    animation-name: FadeIn;
+    animation-duration: 1s;
 }
 
 header {
