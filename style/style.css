@@ -6,6 +6,20 @@
     opacity: 1;
   }
 }
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  50% {
+    opacity: 0;
+    scale: 2;
+  }
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
 @keyframes Heart {
   0% {
     transform: scale(0);
@@ -37,8 +51,28 @@ body {
   font-family: Roboto;
   margin: 0px;
   background-color: #F6F6F6;
+}
+body .LoadingImage {
+  position: absolute;
+  width: 200px;
+  top: 45%;
+  left: 0%;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 10;
+  transform: opacity 1;
+  transform-origin: 50% 50%;
+  animation: 1.5s ease-in 1.5s 1 forwards running FadeOut;
+}
+
+.Loading {
+  opacity: 0;
   animation-name: FadeIn;
-  animation-duration: 1s;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 header {
@@ -68,12 +102,12 @@ nav {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-nav .nav__button {
+nav .button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-nav .nav__button a {
+nav .button a {
   border: hidden;
   border-radius: 25px;
   color: #FFFFFF;
@@ -83,11 +117,11 @@ nav .nav__button a {
   opacity: 1;
   transition: opacity 500ms;
 }
-nav .nav__button a h4 {
+nav .button a h4 {
   margin: 15px 20px 15px 20px;
   font-weight: 500;
 }
-nav .nav__button a:hover {
+nav .button a:hover {
   opacity: 0.8;
 }
 nav h1 {
@@ -139,6 +173,7 @@ nav h2 {
   margin-right: 20px;
   margin-left: 30px;
   padding-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
 }
 
 .restaurants {
@@ -149,49 +184,49 @@ nav h2 {
 .restaurants .restaurants__list {
   text-decoration: none;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article {
+.restaurants .restaurants__list .restaurants__half .restaurants__article {
   margin: 20px 20px 0 20px;
   border-radius: 18px;
   background-color: #FFFFFF;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article a {
+.restaurants .restaurants__list .restaurants__half .restaurants__article a {
   text-decoration: none;
   color: black;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content {
   display: flex;
   justify-content: space-between;
   margin-left: 10px;
   margin-right: 40px;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__text h2 {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__text h2 {
   margin-top: 15px;
   margin-bottom: 0;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__text h4 {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__text h4 {
   margin-top: 10px;
   margin-bottom: 15px;
   font-weight: 300;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__favorite {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite {
   display: flex;
   align-self: center;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__favorite .fa-regular::before {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite .fa-regular::before {
   position: relative;
   background: black;
   -webkit-background-clip: text;
           background-clip: text;
   z-index: 0;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__favorite .fa-solid {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite .fa-solid {
   position: absolute;
   height: 21px;
   width: 21px;
   transition: 400ms ease;
   transform: scale(0);
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__favorite .fa-solid::before {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite .fa-solid::before {
   position: absolute;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -199,16 +234,16 @@ nav h2 {
   color: #FF79DA;
   z-index: 1;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-regular::before {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-regular::before {
   position: relative;
   -webkit-background-clip: text;
           background-clip: text;
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-solid {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-solid {
   position: absolute;
   transform: scale(1.1);
 }
-.restaurants .restaurants__list .restaurants__list__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-solid::before {
+.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-solid::before {
   position: relative;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -268,7 +303,6 @@ footer .footer__click h3 {
     font-size: 40px;
   }
   .fonctionnement {
-    justify-content: center;
     padding-left: 180px;
     padding-right: 180px;
   }
@@ -289,6 +323,7 @@ footer .footer__click h3 {
   .restaurants h1 {
     margin-left: 180px;
     margin-right: 180px;
+    margin-bottom: 28px;
   }
   .restaurants .restaurants__list {
     display: flex;
@@ -298,16 +333,16 @@ footer .footer__click h3 {
     margin-left: 180px;
     margin-right: 180px;
   }
-  .restaurants .restaurants__list .restaurants__list__half {
+  .restaurants .restaurants__list .restaurants__half {
     display: flex;
     width: 100%;
     gap: 100px;
   }
-  .restaurants .restaurants__list .restaurants__list__half a {
+  .restaurants .restaurants__list .restaurants__half a {
     color: black;
     text-decoration: none;
   }
-  .restaurants .restaurants__list .restaurants__list__half .restaurants__article {
+  .restaurants .restaurants__list .restaurants__half .restaurants__article {
     width: 100%;
     margin: 0;
   }
@@ -316,6 +351,7 @@ footer .footer__click h3 {
     flex-direction: row-reverse;
     gap: 50px;
     padding-top: 50px;
+    padding-right: 50px;
   }
   footer h2 {
     margin: 0;

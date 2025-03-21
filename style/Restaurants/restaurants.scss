@@ -32,6 +32,28 @@ $white_color: #FFFFFF;
     }
 }
 
+@keyframes MenuLoaded {
+    from {
+        transform: scale(0);
+        translate: 200% 0;
+    }
+
+    to {
+        transform: scale(1);
+        translate: 0 0;
+    }
+}
+
+@keyframes MenuPlatsPop {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
 h1 {
     font-size: 24px;
     margin: 20px;
@@ -159,7 +181,7 @@ header {
 
             display: flex;
             align-self: center;
-            
+
             padding: 0;
             border: 0;
 
@@ -216,7 +238,7 @@ header {
             .fa-solid {
 
                 position: absolute;
-                
+
                 animation-name: Heart;
                 animation-duration: 0s;
                 animation-fill-mode: forwards;
@@ -242,6 +264,27 @@ header {
 
         margin-left: 13px;
         margin-right: 13px;
+
+        &--animationtop {
+
+            animation-name: MenuLoaded;
+            animation-duration: 1s;
+
+        }
+
+        &--animationmiddle {
+
+            animation-name: MenuLoaded;
+            animation-duration: 1.5s;
+
+        }
+
+        &--animationbottom {
+
+            animation-name: MenuLoaded;
+            animation-duration: 2s;
+
+        }
 
         p {
 
@@ -282,7 +325,49 @@ header {
 
             margin-bottom: 12px;
 
+            transform: scale(0);
+
             cursor: pointer;
+
+            &--animation1 {
+
+                animation-name: MenuPlatsPop;
+                animation-delay: 1s;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+
+            }
+
+            &--animation2 {
+
+                animation-name: MenuPlatsPop;
+                animation-delay: 1s;
+                animation-duration: 1.25s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+
+            }
+
+            &--animation3 {
+
+                animation-name: MenuPlatsPop;
+                animation-delay: 1s;
+                animation-duration: 1.5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+
+            }
+
+            &--animation4 {
+
+                animation-name: MenuPlatsPop;
+                animation-delay: 1s;
+                animation-duration: 1.75s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+
+            }
 
             .menu_check {
 
@@ -319,14 +404,26 @@ header {
 
             .menu_left {
 
+                display: block;
+
+                width: 100%;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 width: 100%;
 
                 h2 {
 
                     margin: 12px;
-    
+
                     justify-self: left;
-    
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 100%;
+
                 }
             }
 
@@ -351,7 +448,7 @@ header {
                 .menu__plats__indiv__prix--bold {
 
                     font-weight: bold;
-                    
+
                 }
 
             }

@@ -14,6 +14,24 @@
     transform: scale(1.1);
   }
 }
+@keyframes MenuLoaded {
+  from {
+    transform: scale(0);
+    translate: 200% 0;
+  }
+  to {
+    transform: scale(1);
+    translate: 0 0;
+  }
+}
+@keyframes MenuPlatsPop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 h1 {
   font-size: 24px;
   margin: 20px;
@@ -145,6 +163,18 @@ header .header__imageresto img {
   margin-left: 13px;
   margin-right: 13px;
 }
+.menu .menu__plats--animationtop {
+  animation-name: MenuLoaded;
+  animation-duration: 1s;
+}
+.menu .menu__plats--animationmiddle {
+  animation-name: MenuLoaded;
+  animation-duration: 1.5s;
+}
+.menu .menu__plats--animationbottom {
+  animation-name: MenuLoaded;
+  animation-duration: 2s;
+}
 .menu .menu__plats p {
   font-size: 16px;
   margin-top: 40px;
@@ -164,7 +194,36 @@ header .header__imageresto img {
   background-color: #FFFFFF;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
+  transform: scale(0);
   cursor: pointer;
+}
+.menu .menu__plats .menu__plats__indiv--animation1 {
+  animation-name: MenuPlatsPop;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.menu .menu__plats .menu__plats__indiv--animation2 {
+  animation-name: MenuPlatsPop;
+  animation-delay: 1s;
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.menu .menu__plats .menu__plats__indiv--animation3 {
+  animation-name: MenuPlatsPop;
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.menu .menu__plats .menu__plats__indiv--animation4 {
+  animation-name: MenuPlatsPop;
+  animation-delay: 1s;
+  animation-duration: 1.75s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 .menu .menu__plats .menu__plats__indiv .menu_check {
   display: flex;
@@ -184,11 +243,20 @@ header .header__imageresto img {
   padding: 5px;
 }
 .menu .menu__plats .menu__plats__indiv .menu_left {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: 100%;
 }
 .menu .menu__plats .menu__plats__indiv .menu_left h2 {
   margin: 12px;
   justify-self: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 .menu .menu__plats .menu__plats__indiv .menu__plats__indiv__prix {
   display: flex;
