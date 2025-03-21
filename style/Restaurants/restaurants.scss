@@ -1,75 +1,8 @@
-$primary_color: #9356DC;
-
-$secondary_color: #FF79DA;
-
-$tertiary_color: #99E2D0;
-
-$main_background_color: #F6F6F6;
-
-$location_background_color: #EAEAEA;
-
-$location_color: #353535;
-
-$white_color: #FFFFFF;
-
-@keyframes FadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes Heart {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes MenuLoaded {
-    from {
-        transform: scale(0);
-        translate: 200% 0;
-    }
-
-    to {
-        transform: scale(1);
-        translate: 0 0;
-    }
-}
-
-@keyframes MenuPlatsPop {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1)
-    }
-}
-
-h1 {
-    font-size: 24px;
-    margin: 20px;
-}
-
-h2 {
-    font-size: 18px;
-}
-
-h3 {
-    font-size: 17px;
-}
-
-h4 {
-    font-size: 16px;
-}
+@import '../button.scss';
+@import '../color.scss';
+@import '../mixin.scss';
+@import '../keyframes.scss';
+@import '../font.scss';
 
 body {
     align-items: center;
@@ -147,9 +80,11 @@ header {
 
 .menu {
 
-    margin: 240px 0px 0 0px;
+    margin: 240px 0px 0px 0px;
 
     padding-top: 30px;
+
+    padding-bottom: 40px;
 
     border-radius: 50px 50px 0px 0px;
 
@@ -303,7 +238,7 @@ header {
 
         }
 
-        .menu__plats__indiv {
+        .menu__article {
 
             display: flex;
 
@@ -369,7 +304,7 @@ header {
 
             }
 
-            .menu_check {
+            .menu__check {
 
                 display: flex;
 
@@ -402,7 +337,7 @@ header {
 
             }
 
-            .menu_left {
+            .menu__container {
 
                 display: block;
 
@@ -427,7 +362,7 @@ header {
                 }
             }
 
-            .menu__plats__indiv__prix {
+            .menu__text {
 
                 display: flex;
 
@@ -445,7 +380,7 @@ header {
 
                 }
 
-                .menu__plats__indiv__prix--bold {
+                .menu__text--bold {
 
                     font-weight: bold;
 
@@ -455,9 +390,9 @@ header {
 
         }
 
-        .menu__plats__indiv:hover {
+        .menu__article:hover {
 
-            .menu_check {
+            .menu__check {
 
                 display: flex;
 
@@ -469,45 +404,6 @@ header {
 
         }
 
-    }
-
-
-    .menu__button {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        margin: 40px;
-
-        a {
-            border: hidden;
-            border-radius: 25px;
-
-            color: $white_color;
-            background: linear-gradient($secondary_color, $primary_color);
-
-            text-decoration: none;
-
-            box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
-
-            opacity: 1;
-
-            transition: opacity 500ms;
-
-            h4 {
-                margin: 15px 40px 15px 40px;
-
-                font-weight: 500;
-
-            }
-
-            &:hover {
-
-                opacity: 0.8;
-
-            }
-        }
     }
 }
 
@@ -617,13 +513,6 @@ footer {
                 margin-left: 0;
 
             }
-
-        }
-
-        .menu__button {
-
-            margin-bottom: 0;
-            padding-bottom: 40px;
 
         }
 

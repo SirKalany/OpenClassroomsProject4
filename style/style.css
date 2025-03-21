@@ -1,9 +1,60 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+.button a {
+  border: hidden;
+  border-radius: 25px;
+  margin-bottom: 0px;
+  color: #FFFFFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.button a h4 {
+  margin: 15px 50px 15px 50px;
+  font-weight: 500;
+}
+.button a:hover {
+  opacity: 0.8;
+}
+
 @keyframes FadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes Heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes MenuLoaded {
+  from {
+    transform: scale(0);
+    translate: 200% 0;
+  }
+  to {
+    transform: scale(1);
+    translate: 0 0;
+  }
+}
+@keyframes MenuPlatsPop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
 @keyframes FadeOut {
@@ -18,14 +69,6 @@
   100% {
     opacity: 0;
     scale: 1;
-  }
-}
-@keyframes Heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1.1);
   }
 }
 h1 {
@@ -47,10 +90,9 @@ h4 {
 
 body {
   align-items: center;
-  flex-direction: column;
   font-family: Roboto;
   margin: 0px;
-  background-color: #F6F6F6;
+  background-color: #F3F3F3;
 }
 body .LoadingImage {
   position: absolute;
@@ -70,7 +112,7 @@ body .LoadingImage {
 .Loading {
   opacity: 0;
   animation-name: FadeIn;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
@@ -102,27 +144,8 @@ nav {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-nav .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-nav .button a {
-  border: hidden;
-  border-radius: 25px;
-  color: #FFFFFF;
-  background: linear-gradient(#FF79DA, #9356DC);
-  text-decoration: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
-  opacity: 1;
-  transition: opacity 500ms;
-}
-nav .button a h4 {
+nav .button h4 {
   margin: 15px 20px 15px 20px;
-  font-weight: 500;
-}
-nav .button a:hover {
-  opacity: 0.8;
 }
 nav h1 {
   margin: 0px 60px 0px 60px;

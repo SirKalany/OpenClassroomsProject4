@@ -1,0 +1,41 @@
+@import 'color.scss';
+@import 'mixin.scss';
+
+.button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 40px;
+
+    a {
+        border: hidden;
+        border-radius: 25px;
+        margin-bottom: 0px;
+
+        color: $white_color;
+        background: linear-gradient($secondary_color, $primary_color);
+        text-decoration: none;
+
+        @include shadow;
+
+        opacity: 1;
+
+        transition: opacity 500ms;
+
+        h4 {
+
+            margin: 15px 50px 15px 50px;
+
+            font-weight: 500;
+
+        }
+
+        &:hover {
+
+            opacity: 0.8;
+
+        }
+    }
+}

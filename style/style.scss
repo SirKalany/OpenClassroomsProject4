@@ -1,83 +1,11 @@
-$primary_color: #9356DC;
-
-$secondary_color: #FF79DA;
-
-$tertiary_color: #99E2D0;
-
-$main_background_color: #F6F6F6;
-
-$location_background_color: #EAEAEA;
-
-$location_color: #353535;
-
-$white_color: #FFFFFF;
-
-@mixin shadow {
-
-    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
-
-}
-
-@keyframes FadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes FadeOut {
-    0% {
-        opacity: 1;
-        scale: 1;
-    }
-
-    50% {
-
-        opacity: 0;
-        scale: 2;
-
-    }
-
-    100% {
-        opacity: 0;
-        scale: 1;
-    }
-}
-
-
-@keyframes Heart {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-h1 {
-    font-size: 24px;
-    margin: 20px;
-}
-
-h2 {
-    font-size: 18px;
-}
-
-h3 {
-    font-size: 17px;
-}
-
-h4 {
-    font-size: 16px;
-}
+@import 'button.scss';
+@import 'color.scss';
+@import 'mixin.scss';
+@import 'keyframes.scss';
+@import 'font.scss';
 
 body {
     align-items: center;
-    flex-direction: column;
 
     font-family: Roboto;
 
@@ -109,7 +37,7 @@ body {
     opacity: 0;
     
     animation-name: FadeIn;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
 
@@ -153,37 +81,13 @@ nav {
     padding-bottom: 40px;
 
     .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        a {
-            border: hidden;
-            border-radius: 25px;
+        h4 {
 
-            color: $white_color;
-            background: linear-gradient($secondary_color, $primary_color);
+            margin: 15px 20px 15px 20px;
 
-            text-decoration: none;
-
-            @include shadow;
-
-            opacity: 1;
-
-            transition: opacity 500ms;
-
-            h4 {
-                margin: 15px 20px 15px 20px;
-
-                font-weight: 500;
-            }
-
-            &:hover {
-
-                opacity: 0.8;
-
-            }
         }
+
     }
 
     h1 {

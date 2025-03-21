@@ -1,3 +1,28 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+.button a {
+  border: hidden;
+  border-radius: 25px;
+  margin-bottom: 0px;
+  color: #FFFFFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.button a h4 {
+  margin: 15px 50px 15px 50px;
+  font-weight: 500;
+}
+.button a:hover {
+  opacity: 0.8;
+}
+
 @keyframes FadeIn {
   0% {
     opacity: 0;
@@ -32,6 +57,20 @@
     transform: scale(1);
   }
 }
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  50% {
+    opacity: 0;
+    scale: 2;
+  }
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
 h1 {
   font-size: 24px;
   margin: 20px;
@@ -53,7 +92,7 @@ body {
   align-items: center;
   font-family: Roboto;
   margin: 0px;
-  background-color: #F6F6F6;
+  background-color: #F3F3F3;
   animation-name: FadeIn;
   animation-duration: 1s;
 }
@@ -94,8 +133,9 @@ header .header__imageresto img {
 }
 
 .menu {
-  margin: 240px 0px 0 0px;
+  margin: 240px 0px 0px 0px;
   padding-top: 30px;
+  padding-bottom: 40px;
   border-radius: 50px 50px 0px 0px;
   background-color: #F6F6F6;
 }
@@ -116,7 +156,7 @@ header .header__imageresto img {
   align-self: center;
   padding: 0;
   border: 0;
-  background-color: #F6F6F6;
+  background-color: #F3F3F3;
   cursor: pointer;
 }
 .menu .menu__titre .menu__favorite .fa-regular::before {
@@ -183,7 +223,7 @@ header .header__imageresto img {
   border-color: #99E2D0;
   width: 40px;
 }
-.menu .menu__plats .menu__plats__indiv {
+.menu .menu__plats .menu__article {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -197,35 +237,35 @@ header .header__imageresto img {
   transform: scale(0);
   cursor: pointer;
 }
-.menu .menu__plats .menu__plats__indiv--animation1 {
+.menu .menu__plats .menu__article--animation1 {
   animation-name: MenuPlatsPop;
   animation-delay: 1s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
-.menu .menu__plats .menu__plats__indiv--animation2 {
+.menu .menu__plats .menu__article--animation2 {
   animation-name: MenuPlatsPop;
   animation-delay: 1s;
   animation-duration: 1.25s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
-.menu .menu__plats .menu__plats__indiv--animation3 {
+.menu .menu__plats .menu__article--animation3 {
   animation-name: MenuPlatsPop;
   animation-delay: 1s;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
-.menu .menu__plats .menu__plats__indiv--animation4 {
+.menu .menu__plats .menu__article--animation4 {
   animation-name: MenuPlatsPop;
   animation-delay: 1s;
   animation-duration: 1.75s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
-.menu .menu__plats .menu__plats__indiv .menu_check {
+.menu .menu__plats .menu__article .menu__check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,14 +275,14 @@ header .header__imageresto img {
   transition-duration: 400ms;
   transform: scale(0);
 }
-.menu .menu__plats .menu__plats__indiv .menu_check i {
+.menu .menu__plats .menu__article .menu__check i {
   align-self: center;
   color: #99E2D0;
   background-color: white;
   border-radius: 25px;
   padding: 5px;
 }
-.menu .menu__plats .menu__plats__indiv .menu_left {
+.menu .menu__plats .menu__article .menu__container {
   display: block;
   width: 100%;
   overflow: hidden;
@@ -250,7 +290,7 @@ header .header__imageresto img {
   white-space: nowrap;
   width: 100%;
 }
-.menu .menu__plats .menu__plats__indiv .menu_left h2 {
+.menu .menu__plats .menu__article .menu__container h2 {
   margin: 12px;
   justify-self: left;
   overflow: hidden;
@@ -258,46 +298,23 @@ header .header__imageresto img {
   white-space: nowrap;
   width: 100%;
 }
-.menu .menu__plats .menu__plats__indiv .menu__plats__indiv__prix {
+.menu .menu__plats .menu__article .menu__text {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
 }
-.menu .menu__plats .menu__plats__indiv .menu__plats__indiv__prix h4 {
+.menu .menu__plats .menu__article .menu__text h4 {
   margin: 0 12px 12px 12px;
   font-weight: 300;
   font-size: 15px;
 }
-.menu .menu__plats .menu__plats__indiv .menu__plats__indiv__prix .menu__plats__indiv__prix--bold {
+.menu .menu__plats .menu__article .menu__text .menu__text--bold {
   font-weight: bold;
 }
-.menu .menu__plats .menu__plats__indiv:hover .menu_check {
+.menu .menu__plats .menu__article:hover .menu__check {
   display: flex;
   width: 75px;
   transform: scale(1);
-}
-.menu .menu__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 40px;
-}
-.menu .menu__button a {
-  border: hidden;
-  border-radius: 25px;
-  color: #FFFFFF;
-  background: linear-gradient(#FF79DA, #9356DC);
-  text-decoration: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
-  opacity: 1;
-  transition: opacity 500ms;
-}
-.menu .menu__button a h4 {
-  margin: 15px 40px 15px 40px;
-  font-weight: 500;
-}
-.menu .menu__button a:hover {
-  opacity: 0.8;
 }
 
 footer {
@@ -363,10 +380,6 @@ footer .footer__click h3 {
   }
   .menu .menu__plats p {
     margin-left: 0;
-  }
-  .menu .menu__button {
-    margin-bottom: 0;
-    padding-bottom: 40px;
   }
   footer {
     display: flex;
