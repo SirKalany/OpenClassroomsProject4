@@ -88,6 +88,101 @@ h4 {
   font-size: 16px;
 }
 
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 20px;
+}
+footer h2 {
+  font-family: Shrikhand;
+  font-weight: 500;
+  margin-top: 0;
+}
+footer h3 {
+  margin: 0;
+  padding-bottom: 7px;
+  font-weight: 400;
+}
+footer .footer__click {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-items: center;
+  gap: 15px;
+}
+footer .footer__click i {
+  height: 13px;
+  width: 12px;
+}
+footer .footer__click h3 {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    padding-top: 50px;
+  }
+  footer h2 {
+    margin: 0;
+  }
+  footer .footer__content {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  footer .footer__content .footer__click h3 {
+    font-size: 16px;
+  }
+}
+.favorite {
+  display: flex;
+  align-self: center;
+}
+.favorite .fa-regular::before {
+  position: relative;
+  background: black;
+  -webkit-background-clip: text;
+          background-clip: text;
+  z-index: 0;
+}
+.favorite .fa-solid {
+  position: absolute;
+  height: 21px;
+  width: 21px;
+  transition: 400ms ease;
+  transform: scale(0);
+}
+.favorite .fa-solid::before {
+  position: absolute;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: #FF79DA;
+  z-index: 1;
+}
+
+.favorite:hover .fa-regular::before {
+  position: relative;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.favorite:hover .fa-solid {
+  position: absolute;
+  transform: scale(1.1);
+}
+.favorite:hover .fa-solid::before {
+  position: relative;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  z-index: 1;
+  left: -0.1px;
+}
+
 body {
   align-items: center;
   font-family: Roboto;
@@ -231,50 +326,6 @@ nav h2 {
   margin-bottom: 15px;
   font-weight: 300;
 }
-.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite {
-  display: flex;
-  align-self: center;
-}
-.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite .fa-regular::before {
-  position: relative;
-  background: black;
-  -webkit-background-clip: text;
-          background-clip: text;
-  z-index: 0;
-}
-.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite .fa-solid {
-  position: absolute;
-  height: 21px;
-  width: 21px;
-  transition: 400ms ease;
-  transform: scale(0);
-}
-.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite .fa-solid::before {
-  position: absolute;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: #FF79DA;
-  z-index: 1;
-}
-.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-regular::before {
-  position: relative;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-solid {
-  position: absolute;
-  transform: scale(1.1);
-}
-.restaurants .restaurants__list .restaurants__half .restaurants__article .restaurants__content .restaurants__favorite:hover .fa-solid::before {
-  position: relative;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  z-index: 1;
-  left: -0.1px;
-}
 .restaurants img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -285,36 +336,6 @@ nav h2 {
 .restaurants h1 {
   margin-bottom: 0;
   margin-top: 50px;
-}
-
-footer {
-  background-color: #353535;
-  color: #FFFFFF;
-  padding: 20px;
-}
-footer h2 {
-  font-family: Shrikhand;
-  font-weight: 500;
-  margin-top: 0;
-}
-footer h3 {
-  margin: 0;
-  padding-bottom: 7px;
-  font-weight: 400;
-}
-footer .footer__click {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-items: center;
-  gap: 15px;
-}
-footer .footer__click i {
-  height: 13px;
-  width: 12px;
-}
-footer .footer__click h3 {
-  font-weight: 500;
 }
 
 @media screen and (min-width: 1440px) {
@@ -368,23 +389,5 @@ footer .footer__click h3 {
   .restaurants .restaurants__list .restaurants__half .restaurants__article {
     width: 100%;
     margin: 0;
-  }
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 50px;
-    padding-top: 50px;
-    padding-right: 50px;
-  }
-  footer h2 {
-    margin: 0;
-  }
-  footer .footer__content {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
-  footer .footer__content .footer__click h3 {
-    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

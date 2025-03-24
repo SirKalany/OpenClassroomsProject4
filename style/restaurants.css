@@ -88,11 +88,108 @@ h4 {
   font-size: 16px;
 }
 
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 20px;
+}
+footer h2 {
+  font-family: Shrikhand;
+  font-weight: 500;
+  margin-top: 0;
+}
+footer h3 {
+  margin: 0;
+  padding-bottom: 7px;
+  font-weight: 400;
+}
+footer .footer__click {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-items: center;
+  gap: 15px;
+}
+footer .footer__click i {
+  height: 13px;
+  width: 12px;
+}
+footer .footer__click h3 {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    padding-top: 50px;
+  }
+  footer h2 {
+    margin: 0;
+  }
+  footer .footer__content {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  footer .footer__content .footer__click h3 {
+    font-size: 16px;
+  }
+}
+.favorite {
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+}
+.favorite .fa-regular::before {
+  position: relative;
+  background: black;
+  -webkit-background-clip: text;
+          background-clip: text;
+  z-index: 0;
+}
+.favorite .fa-solid {
+  position: absolute;
+  height: 21px;
+  width: 21px;
+  transition: 400ms ease;
+  transform: scale(0);
+}
+.favorite .fa-solid::before {
+  position: absolute;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: #FF79DA;
+  z-index: 1;
+}
+
+.favorite:hover .fa-regular::before {
+  position: relative;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.favorite:hover .fa-solid {
+  position: absolute;
+  transform: scale(1.1);
+}
+.favorite:hover .fa-solid::before {
+  position: relative;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+
 body {
   align-items: center;
   font-family: Roboto;
   margin: 0px;
   background-color: #F3F3F3;
+}
+body .LoadingRestaurants {
   animation-name: FadeIn;
   animation-duration: 1s;
 }
@@ -151,53 +248,13 @@ header .header__imageresto img {
   font-family: Shrikhand;
   margin: 0;
 }
-.menu .menu__titre .menu__favorite {
-  display: flex;
-  align-self: center;
+.menu .menu__titre .favorite {
   padding: 0;
   border: 0;
   background-color: #F3F3F3;
-  cursor: pointer;
 }
-.menu .menu__titre .menu__favorite .fa-regular::before {
-  position: relative;
-  background: black;
-  -webkit-background-clip: text;
-          background-clip: text;
-  z-index: 0;
-}
-.menu .menu__titre .menu__favorite .fa-solid {
-  position: absolute;
-  height: 21px;
-  width: 21px;
-}
-.menu .menu__titre .menu__favorite .fa-solid::before {
-  position: absolute;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
+.menu .menu__titre .favorite .fa-solid::before {
   left: -0.5px;
-  z-index: -1;
-}
-.menu .menu__titre .menu__favorite:hover .fa-regular::before {
-  position: relative;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.menu .menu__titre .menu__favorite:hover .fa-solid {
-  position: absolute;
-  animation-name: Heart;
-  animation-duration: 0s;
-  animation-fill-mode: forwards;
-}
-.menu .menu__titre .menu__favorite:hover .fa-solid::before {
-  position: relative;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  z-index: 1;
-  top: 0.5px;
 }
 .menu .menu__plats {
   margin-left: 13px;
@@ -317,36 +374,6 @@ header .header__imageresto img {
   transform: scale(1);
 }
 
-footer {
-  background-color: #353535;
-  color: #FFFFFF;
-  padding: 20px;
-}
-footer h2 {
-  font-family: Shrikhand;
-  font-weight: 500;
-  margin-top: 0;
-}
-footer h3 {
-  margin: 0;
-  padding-bottom: 7px;
-  font-weight: 400;
-}
-footer .footer__click {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-items: center;
-  gap: 15px;
-}
-footer .footer__click i {
-  height: 13px;
-  width: 12px;
-}
-footer .footer__click h3 {
-  font-weight: 500;
-}
-
 @media screen and (min-width: 1440px) {
   body {
     background-color: #FFFFFF;
@@ -380,22 +407,5 @@ footer .footer__click h3 {
   }
   .menu .menu__plats p {
     margin-left: 0;
-  }
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 50px;
-    padding-top: 50px;
-  }
-  footer h2 {
-    margin: 0;
-  }
-  footer .footer__content {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
-  footer .footer__content .footer__click h3 {
-    font-size: 16px;
   }
 }/*# sourceMappingURL=restaurants.css.map */

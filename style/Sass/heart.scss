@@ -1,0 +1,75 @@
+@import 'color.scss';
+
+.favorite {
+
+    display: flex;
+    align-self: center;
+
+    cursor: pointer;
+
+    .fa-regular {
+
+        &::before {
+
+            position: relative;
+            background: black;
+            background-clip: text;
+            z-index: 0;
+
+        }
+
+    }
+
+    .fa-solid {
+
+        position: absolute;
+        height: 21px;
+        width: 21px;
+
+        transition: 400ms ease;
+        transform: scale(0);
+
+        &::before {
+
+            position: absolute;
+            background: linear-gradient($secondary_color, $primary_color);
+            background-clip: text;
+            color: $secondary_color;
+            z-index: 1;
+
+        }
+
+    }
+
+}
+
+.favorite:hover {
+
+    .fa-regular {
+
+        &::before {
+
+            position: relative;
+            background-clip: text;
+
+        }
+
+    }
+
+    .fa-solid {
+
+        position: absolute;
+
+        transform: scale(1.1);
+
+        &::before {
+
+            position: relative;
+            background: linear-gradient($secondary_color, $primary_color);
+            background-clip: text;
+            color: transparent;
+            z-index: 1;
+
+        }
+    }
+}

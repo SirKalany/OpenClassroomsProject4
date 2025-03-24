@@ -1,8 +1,11 @@
-@import 'button.scss';
-@import 'color.scss';
-@import 'mixin.scss';
-@import 'keyframes.scss';
-@import 'font.scss';
+@import 'Sass/button.scss';
+@import 'Sass/color.scss';
+@import 'Sass/mixin.scss';
+@import 'Sass/keyframes.scss';
+@import 'Sass/font.scss';
+@import 'Sass/footer.scss';
+@import 'Sass/heart.scss';
+
 
 body {
     align-items: center;
@@ -225,79 +228,6 @@ nav {
                         }
 
                     }
-
-                    .restaurants__favorite {
-
-                        display: flex;
-                        align-self: center;
-
-                        .fa-regular {
-
-                            &::before {
-
-                                position: relative;
-                                background: black;
-                                background-clip: text;
-                                z-index: 0;
-
-                            }
-
-                        }
-
-                        .fa-solid {
-
-                            position: absolute;
-                            height: 21px;
-                            width: 21px;
-
-                            transition: 400ms ease;
-                            transform: scale(0);
-
-                            &::before {
-
-                                position: absolute;
-                                background: linear-gradient($secondary_color, $primary_color);
-                                background-clip: text;
-                                color: $secondary_color;
-                                z-index: 1;
-
-                            }
-
-                        }
-
-                    }
-
-                    .restaurants__favorite:hover {
-
-                        .fa-regular {
-
-                            &::before {
-
-                                position: relative;
-                                background-clip: text;
-
-                            }
-
-                        }
-
-                        .fa-solid {
-
-                            position: absolute;
-
-                            transform: scale(1.1);
-
-                            &::before {
-
-                                position: relative;
-                                background: linear-gradient($secondary_color, $primary_color);
-                                background-clip: text;
-                                color: transparent;
-                                z-index: 1;
-                                left: -0.1px;
-
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -321,47 +251,6 @@ nav {
 
     }
 
-}
-
-footer {
-
-    background-color: $location_color;
-    color: #FFFFFF;
-
-    padding: 20px;
-
-    h2 {
-        font-family: Shrikhand;
-        font-weight: 500;
-        margin-top: 0;
-    }
-
-    h3 {
-
-        margin: 0;
-        padding-bottom: 7px;
-        font-weight: 400;
-
-    }
-
-    .footer__click {
-
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-items: center;
-
-        gap: 15px;
-
-        i {
-            height: 13px;
-            width: 12px;
-        }
-
-        h3 {
-            font-weight: 500;
-        }
-    }
 }
 
 @media screen and (min-width:1440px) {
@@ -460,46 +349,6 @@ footer {
                     width: 100%;
 
                     margin: 0;
-
-                }
-
-            }
-
-        }
-
-    }
-
-    footer {
-
-        display: flex;
-
-        flex-direction: row-reverse;
-
-        gap: 50px;
-
-        padding-top: 50px;
-
-        padding-right: 50px;
-
-        h2 {
-
-            margin: 0;
-
-        }
-
-        .footer__content {
-
-            display: flex;
-
-            flex-direction: row;
-
-            gap: 15px;
-
-            .footer__click {
-
-                h3 {
-
-                    font-size: 16px;
 
                 }
 
