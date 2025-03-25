@@ -30,7 +30,7 @@ body {
 
         transform: opacity (1);
         transform-origin: 50% 50%;
-        animation: 1.5s ease-in 1.5s 1 forwards running FadeOut;
+        animation: 1.5s ease-in 1.0s 1 forwards running FadeOut;
 
     }
 }
@@ -41,7 +41,7 @@ body {
     
     animation-name: FadeIn;
     animation-duration: 2s;
-    animation-delay: 1.5s;
+    animation-delay: 1.0s;
     animation-fill-mode: forwards;
 
 }
