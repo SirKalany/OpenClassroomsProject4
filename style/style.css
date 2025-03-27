@@ -31,14 +31,6 @@
     opacity: 1;
   }
 }
-@keyframes Heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
 @keyframes MenuLoaded {
   from {
     transform: scale(0);
@@ -140,11 +132,13 @@ footer .footer__click h3 {
 .favorite {
   display: flex;
   align-self: center;
+  cursor: pointer;
 }
 .favorite .fa-regular::before {
   position: relative;
   background: black;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   z-index: 0;
 }
 .favorite .fa-solid {
@@ -157,14 +151,16 @@ footer .footer__click h3 {
 .favorite .fa-solid::before {
   position: absolute;
   background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: #FF79DA;
   z-index: 1;
 }
 
 .favorite:hover .fa-regular::before {
   position: relative;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .favorite:hover .fa-solid {
   position: absolute;
@@ -173,10 +169,10 @@ footer .footer__click h3 {
 .favorite:hover .fa-solid::before {
   position: relative;
   background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   z-index: 1;
-  left: -0.1px;
 }
 
 body {
@@ -195,16 +191,16 @@ body .LoadingImage {
   margin-right: auto;
   text-align: center;
   z-index: 10;
-  opacity: 1;
+  transform: opacity 1;
   transform-origin: 50% 50%;
-  animation: 1.5s ease-in 1.5s 1 forwards running FadeOut;
+  animation: 1.5s ease-in 1s 1 forwards running FadeOut;
 }
 
 .Loading {
   opacity: 0;
   animation-name: FadeIn;
   animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -323,7 +319,8 @@ nav h2 {
   font-weight: 300;
 }
 .restaurants img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 170px;
   border-radius: 15px 15px 0 0;
@@ -356,6 +353,7 @@ nav h2 {
   }
   .fonctionnement .fonctionnement__list .fonctionnement__article .fonctionnement__content {
     padding-right: 50px;
+    width: -moz-fit-content;
     width: fit-content;
   }
   .restaurants h1 {

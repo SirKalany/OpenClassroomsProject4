@@ -265,7 +265,7 @@ header {
                 background-color: $tertiary_color;
 
                 transition-duration: 400ms;
-                transform: scale(0);
+                transform: translate(0);
 
                 i {
 
@@ -278,6 +278,9 @@ header {
                     border-radius: 25px;
 
                     padding: 5px;
+
+                    transition-duration: 400ms;
+                    opacity: 0;
 
                 }
 
@@ -344,7 +347,11 @@ header {
 
                 width: 75px;
 
-                transform: scale(1.0);
+                i {
+
+                    opacity: 1;
+
+                }
 
             }
 
