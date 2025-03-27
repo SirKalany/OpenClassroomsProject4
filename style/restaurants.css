@@ -8,8 +8,8 @@
   border: hidden;
   border-radius: 25px;
   margin-bottom: 0px;
-  color: #FFFFFF;
-  background: linear-gradient(#FF79DA, #9356DC);
+  color: #ffffff;
+  background: linear-gradient(#ff79da, #9356dc);
   text-decoration: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
   opacity: 1;
@@ -90,7 +90,7 @@ h4 {
 
 footer {
   background-color: #353535;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 20px;
 }
 footer h2 {
@@ -145,8 +145,7 @@ footer .footer__click h3 {
 .favorite .fa-regular::before {
   position: relative;
   background: black;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   z-index: 0;
 }
 .favorite .fa-solid {
@@ -158,17 +157,15 @@ footer .footer__click h3 {
 }
 .favorite .fa-solid::before {
   position: absolute;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: #FF79DA;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  color: #ff79da;
   z-index: 1;
 }
 
 .favorite:hover .fa-regular::before {
   position: relative;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
 }
 .favorite:hover .fa-solid {
   position: absolute;
@@ -176,9 +173,8 @@ footer .footer__click h3 {
 }
 .favorite:hover .fa-solid::before {
   position: relative;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
   color: transparent;
   z-index: 1;
 }
@@ -187,7 +183,7 @@ body {
   align-items: center;
   font-family: Roboto;
   margin: 0px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 body .LoadingRestaurants {
   animation-name: FadeIn;
@@ -198,7 +194,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 header .header__return {
   display: flex;
@@ -220,8 +216,7 @@ header i {
 header .header__imageresto img {
   display: block;
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -1;
   top: 75px;
   width: 100%;
@@ -234,7 +229,7 @@ header .header__imageresto img {
   padding-top: 30px;
   padding-bottom: 40px;
   border-radius: 50px 50px 0px 0px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .menu .menu__titre {
   display: flex;
@@ -251,7 +246,7 @@ header .header__imageresto img {
 .menu .menu__titre .favorite {
   padding: 0;
   border: 0;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 .menu .menu__titre .favorite .fa-solid::before {
   left: -0.5px;
@@ -277,7 +272,7 @@ header .header__imageresto img {
   margin-top: 40px;
   padding-bottom: 5px;
   border-bottom: solid;
-  border-color: #99E2D0;
+  border-color: #99e2d0;
   width: 40px;
 }
 .menu .menu__plats .menu__article {
@@ -288,7 +283,7 @@ header .header__imageresto img {
   padding: 0;
   border: hidden;
   border-radius: 15px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 12px;
   transform: scale(0);
@@ -328,13 +323,13 @@ header .header__imageresto img {
   align-items: center;
   width: 0px;
   border-radius: 0px 15px 15px 0px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   transition-duration: 400ms;
   transform: scale(0);
 }
 .menu .menu__plats .menu__article .menu__check i {
   align-self: center;
-  color: #99E2D0;
+  color: #99e2d0;
   background-color: white;
   border-radius: 25px;
   padding: 5px;
@@ -376,7 +371,7 @@ header .header__imageresto img {
 
 @media screen and (min-width: 1440px) {
   body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
   header img {
     margin-top: 30px;
@@ -396,7 +391,7 @@ header .header__imageresto img {
     margin-right: 192px;
     margin-top: 290px;
     padding-top: 30px;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
   }
   .menu .menu__titre {
     justify-content: center;
@@ -408,4 +403,4 @@ header .header__imageresto img {
   .menu .menu__plats p {
     margin-left: 0;
   }
-}/*# sourceMappingURL=restaurants.css.map */
+} /*# sourceMappingURL=restaurants.css.map */
